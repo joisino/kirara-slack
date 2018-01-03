@@ -2,12 +2,16 @@
 
 まんがタイムきらら系列誌の発売日を Slack に通知します。きらら以外の月刊誌での使えるはずです。
 
+`python 3.5.4`
+
 ## 導入方法
 
 ```
 $ git clone --recursive https://github.com/joisino/kirara-slack.git
 $ pip install -r requirements.txt
 ```
+
+`pip` が python2 用のものを参照している場合は、適宜 `pip3` 等を利用してください。
 
 ## 使い方
 
