@@ -44,7 +44,10 @@ def main():
         if magazine[1] in li:
             text = config.message % magazine[0]
             print(text)
-            slack.notify(text=text)
+            try:
+                slack.notify(text=text)
+            except ValueError:
+                print('Slackweb raised ValueError. Please configure `config.py` correctly.')
         
 if __name__ == '__main__':
     main()
