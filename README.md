@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 
 `config.py` に slack の Webhook URL を記入してください。これは、 https://slack.com/services/new/incoming-webhook 等から得ることができます。
 
-また、お好みで `config.py` 内の通知する雑誌を追加・削除してください。
+また、お好みで `config.py` 内の通知する雑誌、通知するメッセージ内容を設定してください。
 
 発売日に `notify.py` を実行すると、Slack に通知が飛びます。
 

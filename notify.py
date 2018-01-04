@@ -42,7 +42,7 @@ def main():
 
     for magazine in config.magazines:
         if magazine[1] in li:
-            text = "今日は%sの発売日です。" % magazine[0]
+            text = config.message % magazine[0]
             print(text)
             slack.notify(text=text)
         
