@@ -22,10 +22,13 @@ def main():
     with open(filename) as f:
         holidays = yaml.load(f.read())
 
+    def is_holiday(date):
+        return date.weekday() == 6 or date in holidays
+
     cur = datetime.date.today()
 
     # Holidays are not release days.
-    if cur in holidays:
+    if is_holiday(cur):
         sys.exit(0)
 
     # append succeeding holidays
@@ -34,7 +37,7 @@ def main():
     while True:
         li.append(cur.day)
         cur += delta
-        if cur not in holidays:
+        if not is_holiday(cur):
             break
 
     for magazine in config.magazines:
